@@ -1,0 +1,1611 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>LAMP · AGou's StudyNote</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="AGou">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Docker&K8s/" />
+    
+    
+    <link rel="prev" href="LNMP.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"AGou-ops/myStudyNote","types":["star","watch","fork"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://agou-ops.github.io" target="_blank" class="custom-link">◆点击进入我的个人博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    关于我
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Program_lang/">
+            
+                <a href="../Program_lang/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    编程语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Program_lang/Python.html">
+            
+                <a href="../Program_lang/Python.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Program_lang/Java.html">
+            
+                <a href="../Program_lang/Java.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Program_lang/Splash_Lua.html">
+            
+                <a href="../Program_lang/Splash_Lua.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    Splash_Lua
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Database/">
+            
+                <a href="../Database/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Database/Mysql、MariaDB/README.md">
+            
+                <span>
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    Mysql/MariaDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../Database/Mysql、MariaDB/MySQL、MariaDB基础.html">
+            
+                <a href="../Database/Mysql、MariaDB/MySQL、MariaDB基础.html">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    MySQL/MariaDB基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../Database/Mysql、MariaDB/php-mysql.html">
+            
+                <a href="../Database/Mysql、MariaDB/php-mysql.html">
+            
+                    
+                        <b>1.3.1.2.</b>
+                    
+                    php-mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Database/MongoDB.html">
+            
+                <a href="../Database/MongoDB.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Database/Redis.html">
+            
+                <a href="../Database/Redis.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Linux/">
+            
+                <a href="../Linux/">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Linux/Linux基础.html">
+            
+                <a href="../Linux/Linux基础.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    Linux基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Linux/Linux启动流程、内核、grub、模块、内核的编译、anaconda自动化.html">
+            
+                <a href="../Linux/Linux启动流程、内核、grub、模块、内核的编译、anaconda自动化.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    Linux启动流程、内核、grub、模块等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Linux/Linux服务器.html">
+            
+                <a href="../Linux/Linux服务器.html">
+            
+                    
+                        <b>1.4.3.</b>
+                    
+                    Linux服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Linux/Linux状态信息.html">
+            
+                <a href="../Linux/Linux状态信息.html">
+            
+                    
+                        <b>1.4.4.</b>
+                    
+                    Linux状态信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Linux/Linux网络客户端工具.html">
+            
+                <a href="../Linux/Linux网络客户端工具.html">
+            
+                    
+                        <b>1.4.5.</b>
+                    
+                    Linux网络客户端工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Linux/Linux网络配置.html">
+            
+                <a href="../Linux/Linux网络配置.html">
+            
+                    
+                        <b>1.4.6.</b>
+                    
+                    Linux网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Linux/Linux配置文件.md">
+            
+                <span>
+            
+                    
+                        <b>1.4.7.</b>
+                    
+                    Linux配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Linux/Linux时间服务器.html">
+            
+                <a href="../Linux/Linux时间服务器.html">
+            
+                    
+                        <b>1.4.8.</b>
+                    
+                    Linux时间服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../Linux/Linux日志管理系统.html">
+            
+                <a href="../Linux/Linux日志管理系统.html">
+            
+                    
+                        <b>1.4.9.</b>
+                    
+                    Linux日志管理系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../Linux/sudo详解.html">
+            
+                <a href="../Linux/sudo详解.html">
+            
+                    
+                        <b>1.4.10.</b>
+                    
+                    sudo详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../Linux/SElinux.html">
+            
+                <a href="../Linux/SElinux.html">
+            
+                    
+                        <b>1.4.11.</b>
+                    
+                    SELinux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../Linux/iptables.html">
+            
+                <a href="../Linux/iptables.html">
+            
+                    
+                        <b>1.4.12.</b>
+                    
+                    iptables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../Linux/Linux_shell.html">
+            
+                <a href="../Linux/Linux_shell.html">
+            
+                    
+                        <b>1.4.13.</b>
+                    
+                    Linux Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../Linux/shell_awk.html">
+            
+                <a href="../Linux/shell_awk.html">
+            
+                    
+                        <b>1.4.14.</b>
+                    
+                    shell_awk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../Linux/OpenSSL、PKI搭建、算法.html">
+            
+                <a href="../Linux/OpenSSL、PKI搭建、算法.html">
+            
+                    
+                        <b>1.4.15.</b>
+                    
+                    OpenSSL、PKI搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../Linux/DNS服务器.html">
+            
+                <a href="../Linux/DNS服务器.html">
+            
+                    
+                        <b>1.4.16.</b>
+                    
+                    DNS服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../Linux/Frp内网穿透.html">
+            
+                <a href="../Linux/Frp内网穿透.html">
+            
+                    
+                        <b>1.4.17.</b>
+                    
+                    Frp内网穿透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../Linux/Linux其他.md">
+            
+                <span>
+            
+                    
+                        <b>1.4.18.</b>
+                    
+                    Linux其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Linux_FileSystem/">
+            
+                <a href="../Linux_FileSystem/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    Linux文件系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Linux_FileSystem/FTP.html">
+            
+                <a href="../Linux_FileSystem/FTP.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Linux_FileSystem/SAMBA.html">
+            
+                <a href="../Linux_FileSystem/SAMBA.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    SAMBA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Linux_Tools/">
+            
+                <a href="../Linux_Tools/">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    Linux工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Linux_Tools/fzf工具.html">
+            
+                <a href="../Linux_Tools/fzf工具.html">
+            
+                    
+                        <b>1.6.1.</b>
+                    
+                    fzf工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Linux_Tools/工具集合.html">
+            
+                <a href="../Linux_Tools/工具集合.html">
+            
+                    
+                        <b>1.6.2.</b>
+                    
+                    Linux工具集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../WEB_Server/">
+            
+                <a href="../WEB_Server/">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    网站服务器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../WEB_Server/HTML基础.html">
+            
+                <a href="../WEB_Server/HTML基础.html">
+            
+                    
+                        <b>1.7.1.</b>
+                    
+                    HTML基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../WEB_Server/WEB基础.html">
+            
+                <a href="../WEB_Server/WEB基础.html">
+            
+                    
+                        <b>1.7.2.</b>
+                    
+                    WEB基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../WEB_Server/httpd.html">
+            
+                <a href="../WEB_Server/httpd.html">
+            
+                    
+                        <b>1.7.3.</b>
+                    
+                    httpd/Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../WEB_Server/httpd.conf文件详解.html">
+            
+                <a href="../WEB_Server/httpd.conf文件详解.html">
+            
+                    
+                        <b>1.7.4.</b>
+                    
+                    httpd.conf文件详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../WEB_Server/Nginx.html">
+            
+                <a href="../WEB_Server/Nginx.html">
+            
+                    
+                        <b>1.7.5.</b>
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../WEB_Server/HTTP状态码-详情.html">
+            
+                <a href="../WEB_Server/HTTP状态码-详情.html">
+            
+                    
+                        <b>1.7.6.</b>
+                    
+                    HTTP状态码-详情
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.8.</b>
+                    
+                    常用框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="LNMP.html">
+            
+                <a href="LNMP.html">
+            
+                    
+                        <b>1.8.1.</b>
+                    
+                    LNMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.2" data-path="LAMP.html">
+            
+                <a href="LAMP.html">
+            
+                    
+                        <b>1.8.2.</b>
+                    
+                    LAMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Docker&K8s/">
+            
+                <a href="../Docker&K8s/">
+            
+                    
+                        <b>1.9.</b>
+                    
+                    容器及容器编排
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Docker&K8s/Docker/Docker.html">
+            
+                <a href="../Docker&K8s/Docker/Docker.html">
+            
+                    
+                        <b>1.9.1.</b>
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="../Docker&K8s/Docker/Docker.html">
+            
+                <a href="../Docker&K8s/Docker/Docker.html">
+            
+                    
+                        <b>1.9.1.1.</b>
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Docker&K8s/K8s/">
+            
+                <a href="../Docker&K8s/K8s/">
+            
+                    
+                        <b>1.9.2.</b>
+                    
+                    K8s
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" data-path="../Docker&K8s/K8s/K8s基础知识.html">
+            
+                <a href="../Docker&K8s/K8s/K8s基础知识.html">
+            
+                    
+                        <b>1.9.2.1.</b>
+                    
+                    K8s基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.2" data-path="../Docker&K8s/K8s/K8s安装与部署.html">
+            
+                <a href="../Docker&K8s/K8s/K8s安装与部署.html">
+            
+                    
+                        <b>1.9.2.2.</b>
+                    
+                    K8s安装与部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Git/">
+            
+                <a href="../Git/">
+            
+                    
+                        <b>1.10.</b>
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Git/Git基础.html">
+            
+                <a href="../Git/Git基础.html">
+            
+                    
+                        <b>1.10.1.</b>
+                    
+                    Git基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Git/GitLab服务器.html">
+            
+                <a href="../Git/GitLab服务器.html">
+            
+                    
+                        <b>1.10.2.</b>
+                    
+                    GitLab服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Windows/">
+            
+                <a href="../Windows/">
+            
+                    
+                        <b>1.11.</b>
+                    
+                    Windows系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Windows/cmd命令.html">
+            
+                <a href="../Windows/cmd命令.html">
+            
+                    
+                        <b>1.11.1.</b>
+                    
+                    cmd命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Vim.html">
+            
+                <a href="../Vim.html">
+            
+                    
+                        <b>1.12.</b>
+                    
+                    Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../i3WM快捷键.html">
+            
+                <a href="../i3WM快捷键.html">
+            
+                    
+                        <b>1.13.</b>
+                    
+                    i3WM快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../ADB命令.html">
+            
+                <a href="../ADB命令.html">
+            
+                    
+                        <b>1.14.</b>
+                    
+                    ADB命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Tmux.html">
+            
+                <a href="../Tmux.html">
+            
+                    
+                        <b>1.15.</b>
+                    
+                    Tmux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../Kindle.html">
+            
+                <a href="../Kindle.html">
+            
+                    
+                        <b>1.16.</b>
+                    
+                    Kindle越狱指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Other/">
+            
+                <a href="../Other/">
+            
+                    
+                        <b>1.17.</b>
+                    
+                    Other
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../Other/pandoc.html">
+            
+                <a href="../Other/pandoc.html">
+            
+                    
+                        <b>1.17.1.</b>
+                    
+                    pandoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../Other/jupyter&reveal.js.html">
+            
+                <a href="../Other/jupyter&reveal.js.html">
+            
+                    
+                        <b>1.17.2.</b>
+                    
+                    jupyter & reveal.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../Other/json.html">
+            
+                <a href="../Other/json.html">
+            
+                    
+                        <b>1.17.3.</b>
+                    
+                    json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="../Other/Reveal_js.html">
+            
+                <a href="../Other/Reveal_js.html">
+            
+                    
+                        <b>1.17.4.</b>
+                    
+                    Reveal_js
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >LAMP</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#lamp&#x67B6;&#x6784;&#x8BF4;&#x660E;&#x4EE5;&#x53CA;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;">1. LAMP&#x67B6;&#x6784;&#x8BF4;&#x660E;&#x4EE5;&#x53CA;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;</a></li><li><a href="#lamp&#x5B89;&#x88C5;">2. LAMP&#x5B89;&#x88C5;</a></li><ul><li><a href="#&#x4F7F;&#x7528;&#x6A21;&#x5757;modules">2.1. &#x4F7F;&#x7528;&#x6A21;&#x5757;(Modules)</a></li><ul><li><a href="#&#x5728;centos-6&#x4E0A;&#xFF1A;">2.1.1. &#x5728;CentOS 6&#x4E0A;&#xFF1A;</a></li><li><a href="#&#x5728;centos-7&#x4E0A;&#xFF1A;">2.1.2. &#x5728;CentOS 7&#x4E0A;&#xFF1A;</a></li><li><a href="#&#x5C0F;&#x7EC3;&#x4E60;">2.1.3. &#x5C0F;&#x7EC3;&#x4E60;</a></li></ul><li><a href="#&#x4F7F;&#x7528;php-fpmfastcgi&#x4F5C;&#x4E3A;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;9000">2.2. &#x4F7F;&#x7528;php-fpm(FastCGI,&#x4F5C;&#x4E3A;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;:9000)</a></li><ul><li><a href="#&#x4EE5;centos-7&#x4E3A;&#x4F8B;&#xFF0C;&#x5C06;httpd&#x3001;php&#x3001;mariadb&#x7F6E;&#x4E8E;&#x540C;&#x4E00;&#x53F0;&#x4E3B;&#x673A;&#x4E4B;&#x4E0A;">2.2.1. &#x4EE5;CentOS 7&#x4E3A;&#x4F8B;&#xFF0C;&#x5C06;httpd&#x3001;php&#x3001;mariadb&#x7F6E;&#x4E8E;&#x540C;&#x4E00;&#x53F0;&#x4E3B;&#x673A;&#x4E4B;&#x4E0A;</a></li></ul></ul><li><a href="#&#x914D;&#x7F6E;-php-&#x6D4B;&#x8BD5;&#x8FDE;&#x63A5;-mysql">3. &#x914D;&#x7F6E; php &#x6D4B;&#x8BD5;&#x8FDE;&#x63A5; mysql,</a></li><li><a href="#&#x542F;&#x52A8;&#x670D;&#x52A1;">4. &#x542F;&#x52A8;&#x670D;&#x52A1;</a></li><ul><li><a href="#&#x7F16;&#x8BD1;&#x5B89;&#x88C5;">4.1. &#x7F16;&#x8BD1;&#x5B89;&#x88C5;</a></li><li><a href="#&#x4E00;&#x952E;&#x5B89;&#x88C5;&#x5305;">4.2. &#x4E00;&#x952E;&#x5B89;&#x88C5;&#x5305;</a></li></ul></ul></div><a href="#lamp&#x67B6;&#x6784;&#x8BF4;&#x660E;&#x4EE5;&#x53CA;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p><a href="https://s2.ax1x.com/2019/11/21/MIZWm8.png" data-lightbox="caf06e68-9962-4780-8ada-c8e4bb10d98a" data-title="LAMP" target="_blank"><img src="https://s2.ax1x.com/2019/11/21/MIZWm8.png" alt="LAMP"></a></p>
+<hr>
+<h1 id="lamp&#x67B6;&#x6784;&#x8BF4;&#x660E;&#x4EE5;&#x53CA;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;"><a name="lamp&#x67B6;&#x6784;&#x8BF4;&#x660E;&#x4EE5;&#x53CA;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#lamp&#x67B6;&#x6784;&#x8BF4;&#x660E;&#x4EE5;&#x53CA;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>1. LAMP&#x67B6;&#x6784;&#x8BF4;&#x660E;&#x4EE5;&#x53CA;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;</h1>
+<p>&#x5404;&#x5DE5;&#x5177;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x56FE;&#x4F8B;&#xFF1A;</p>
+<p><a href="https://s2.ax1x.com/2019/11/21/MIZf0S.png" data-lightbox="bcc32598-6861-4471-9c7c-28a2f54f71b3" data-title="LAMP&#x67B6;&#x6784;&#x8BF4;&#x660E;1" target="_blank"><img src="https://s2.ax1x.com/2019/11/21/MIZf0S.png" alt="LAMP&#x67B6;&#x6784;&#x8BF4;&#x660E;1"></a></p>
+<p>&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<p><a href="../home/suofeiya/myGitbook/images/MIZ2Of.png" data-lightbox="555f8211-8553-4596-b453-baa9afa4e61a" data-title="LAMP&#x8BF4;&#x660E;2"><img src="../home/suofeiya/myGitbook/images/MIZ2Of.png" alt="LAMP&#x8BF4;&#x660E;2"></a></p>
+<h1 id="lamp&#x5B89;&#x88C5;"><a name="lamp&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#lamp&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>2. LAMP&#x5B89;&#x88C5;</h1>
+<h2 id="&#x4F7F;&#x7528;&#x6A21;&#x5757;modules"><a name="&#x4F7F;&#x7528;&#x6A21;&#x5757;modules" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x6A21;&#x5757;modules"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x4F7F;&#x7528;&#x6A21;&#x5757;(Modules)</h2>
+<h3 id="&#x5728;centos-6&#x4E0A;&#xFF1A;"><a name="&#x5728;centos-6&#x4E0A;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x5728;centos-6&#x4E0A;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.1. &#x5728;CentOS 6&#x4E0A;&#xFF1A;</h3>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x5B89;&#x88C5;httpd&#xFF0C;php&#xFF0C;php-mysql&#xFF0C;mysql-server</span>
+yum <span class="token function">install</span> -y httpd php php-mysql mysql-server
+<span class="token function">service</span> httpd start
+</code></pre>
+<p>&#x6B64;&#x65F6;&#xFF0C;<code>php</code>&#x6A21;&#x5757;&#x5C31;&#x5B89;&#x88C5;&#x5230;<code>httpd</code>&#x4E2D;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6839;&#x76EE;&#x5F55;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">vim</span> /var/www/html/index.php
+<span class="token comment"># &#x589E;&#x52A0;&#x4EE5;&#x4E0B;&#x6D4B;&#x8BD5;&#x5185;&#x5BB9;</span>
+<span class="token operator">&lt;</span>?php
+phpinfo<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+?<span class="token operator">&gt;</span>
+<span class="token comment">######</span>
+<span class="token comment"># &#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x9A8C;&#x8BC1;&#x4E00;&#x4E0B;&#x5373;&#x53EF;</span>
+</code></pre>
+<p>&#x542F;&#x7528;<code>mysql</code></p>
+<pre class="language-"><code class="lang-bash"><span class="token function">service</span> mysql start
+</code></pre>
+<p>&#x6D4B;&#x8BD5;<code>php</code>&#x8FDE;&#x63A5;<code>mysql</code></p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x65B0;&#x5EFA;&#x6D4B;&#x8BD5;&#x9875;&#x9762;</span>
+<span class="token function">vim</span> /var/www/html/php-mysql.php
+<span class="token comment"># &#x589E;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;</span>
+<span class="token operator">&lt;</span>?php
+    <span class="token variable">$conn</span> <span class="token operator">=</span> mysql_connect<span class="token punctuation">(</span><span class="token string">&apos;127.0.0.1&apos;</span>,<span class="token string">&apos;root&apos;</span>,<span class="token string">&apos;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$conn</span><span class="token punctuation">)</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;OK&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;Fail&quot;</span><span class="token punctuation">;</span>
+    mysql_close<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+?<span class="token operator">&gt;</span>
+<span class="token comment">######</span>
+</code></pre>
+<h3 id="&#x5728;centos-7&#x4E0A;&#xFF1A;"><a name="&#x5728;centos-7&#x4E0A;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x5728;centos-7&#x4E0A;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.2. &#x5728;CentOS 7&#x4E0A;&#xFF1A;</h3>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x5B89;&#x88C5;httpd&#xFF0C;php&#xFF0C;php-mysql&#xFF0C;mariadb-server</span>
+yum <span class="token function">install</span> -y httpd php php-mysql mariadb-server
+systemctl start httpd
+systemctl start mariadb
+</code></pre>
+<p>&#x8FDE;&#x63A5;<code>php</code>&#x548C;<code>mysql</code>&#x4EE5;&#x53CA;&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;&#x548C;CentOS&#x7C7B;&#x4F3C;.</p>
+<h3 id="&#x5C0F;&#x7EC3;&#x4E60;"><a name="&#x5C0F;&#x7EC3;&#x4E60;" class="anchor-navigation-ex-anchor" href="#&#x5C0F;&#x7EC3;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.3. &#x5C0F;&#x7EC3;&#x4E60;</h3>
+<h4 id="&#x5B89;&#x88C5;&#x5E76;&#x4F7F;&#x7528;wordpress"><a name="&#x5B89;&#x88C5;&#x5E76;&#x4F7F;&#x7528;wordpress" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;&#x5E76;&#x4F7F;&#x7528;wordpress"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;&#x5E76;&#x4F7F;&#x7528;WordPress</h4>
+<blockquote>
+<p> <code>wordpress</code>&#x5B98;&#x65B9;&#x7AD9;&#x70B9;&#xFF1A;<a href="https://wordpress.org/" target="_blank">https://wordpress.org/</a></p>
+</blockquote>
+<ol>
+<li><p>&#x4E0B;&#x8F7D;&#x5B8C;&#x5408;&#x9002;&#x7684;<code>wordpress</code>&#x7248;&#x672C;&#x540E;&#xFF0C;&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7F51;&#x7AD9;&#x6839;&#x76EE;&#x5F55;</p>
+</li>
+<li><p>&#x4E3A;<code>wordpress</code>&#x6DFB;&#x52A0;<code>mysql</code>&#x7528;&#x6237;&#x8D26;&#x53F7;&#x5E76;&#x521B;&#x5EFA;&#x76F8;&#x5173;&#x6570;&#x636E;&#x5E93;</p>
+</li>
+</ol>
+<pre class="language-"><code class="lang-mysql">MariaDB [(none)]&gt; GRANT ALL ON wordpress.* TO &apos;wordpress&apos;@&apos;%&apos; IDENTIFIED BY &apos;wordpress&apos;;
+MariaDB [(none)]&gt; CREATE DATABASE wordpress;
+* &#x6CE8;&#x610F;&#xFF1A;mysql&#x9ED8;&#x8BA4;&#x4F1A;&#x542F;&#x7528;&#x57DF;&#x540D;&#x53CD;&#x89E3;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x4E3B;&#x673A;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x8BBF;&#x95EE;&#x5230;mysql&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A; &#x5728;`CentOS 7`&#x4E2D;&#xFF0C;&#x7F16;&#x8F91;`/etc/my.cnf`&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x52A0;&#x5165;`skip-name-resolve=ON|1`(&#x8DF3;&#x8FC7;&#x4E3B;&#x673A;&#x89E3;&#x6790;)&#xFF0C;&#x63A5;&#x7740;&#x91CD;&#x542F;mariadb&#x5373;&#x53EF;
+</code></pre>
+<ol>
+<li>&#x81EA;&#x884C;&#x4FEE;&#x6539;<code>wordpress</code>&#x7684;&#x5B89;&#x88C5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+</ol>
+<pre class="language-"><code class="lang-bash"><span class="token function">cp</span> wp-config-sample.php wp-config.php
+<span class="token comment"># &#x4FEE;&#x6539;&#x76F8;&#x5173;&#x53C2;&#x6570;</span>
+DB_NAME                <span class="token comment"># &#x4F60;&#x7684;&#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;</span>
+DB_USER                <span class="token comment"># &#x6570;&#x636E;&#x5E93;&#x7528;&#x6237;</span>
+DB_PASSWORD            <span class="token comment"># &#x6570;&#x636E;&#x5E93;&#x7528;&#x6237;&#x7684;&#x5BC6;&#x7801;</span>
+DB_HOST                <span class="token comment"># mysql&#x4E3B;&#x673A;&#x5730;&#x5740;</span>
+</code></pre>
+<ol>
+<li>&#x6253;&#x5F00;<code>wordpress</code>&#x5373;&#x53EF;</li>
+</ol>
+<h4 id="&#x5B89;&#x88C5;&#x5E76;&#x4F7F;&#x7528;dzxdiscuz&#x8BBA;&#x575B;&#x7CFB;&#x7EDF;"><a name="&#x5B89;&#x88C5;&#x5E76;&#x4F7F;&#x7528;dzxdiscuz&#x8BBA;&#x575B;&#x7CFB;&#x7EDF;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;&#x5E76;&#x4F7F;&#x7528;dzxdiscuz&#x8BBA;&#x575B;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;&#x5E76;&#x4F7F;&#x7528;DZX(Discuz!)&#x8BBA;&#x575B;&#x7CFB;&#x7EDF;</h4>
+<blockquote>
+<p>&#x5F00;&#x6E90;&#x5730;&#x5740;&#xFF1A;<a href="https://gitee.com/ComsenzDiscuz/DiscuzX" target="_blank">https://gitee.com/ComsenzDiscuz/DiscuzX</a></p>
+<p>&#x5B98;&#x65B9;&#x7AD9;&#x70B9;&#xFF1A;<a href="https://www.discuz.net/" target="_blank">https://www.discuz.net/</a></p>
+<p>&#x5B98;&#x65B9;&#x5E94;&#x7528;&#x4E2D;&#x5FC3;&#xFF1A;<a href="https://addon.dismall.com/" target="_blank">https://addon.dismall.com/</a></p>
+</blockquote>
+<ol>
+<li>&#x4E0B;&#x8F7D;&#x5408;&#x9002;&#x7684;<code>DZX</code>&#x7248;&#x672C;&#xFF1A;<a href="https://gitee.com/3dming/DiscuzL/attach_files/277010/download&#xFF0C;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x7AD9;&#x76EE;&#x5F55;" target="_blank">https://gitee.com/3dming/DiscuzL/attach_files/277010/download&#xFF0C;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x7AD9;&#x76EE;&#x5F55;</a></li>
+<li>&#x8D4B;&#x4E88;&#x6682;&#x65F6;&#x7684;<code>acl</code>&#x6743;&#x9650;</li>
+</ol>
+<pre class="language-"><code class="lang-bash">setfacl -R -m  u:apache:rwx /var/www/*
+</code></pre>
+<ol>
+<li>&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+</ol>
+<pre class="language-"><code class="lang-bash"><span class="token function">vim</span> /etc/httpd/conf.d/fastcgi.conf
+<span class="token comment">####</span>
+DirectoryIndex index.php
+ProxyRequests Off
+ProxyPassMatch ^/<span class="token punctuation">(</span>.*<span class="token punctuation">\</span>.php<span class="token punctuation">)</span>$ fcgi://127.0.0.1:9000/var/www/<span class="token variable">$1</span> 
+<span class="token comment">####</span>
+</code></pre>
+<ol>
+<li>&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x6267;&#x884C;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;</li>
+<li>&#x5B89;&#x88C5;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x6536;&#x56DE;<code>acl</code>&#x6743;&#x9650;</li>
+</ol>
+<pre class="language-"><code class="lang-bash">setfacl -R -b /var/www/*
+</code></pre>
+<hr>
+<p><strong>&#x62D3;&#x5C55;&#xFF1A;</strong><code>phpwind</code>&#xFF08;&#x7B80;&#x79F0;&#xFF1A;pw&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;<code>PHP</code>&#x548C;<code>MySQL</code>&#x7684;&#x5F00;&#x6E90;&#x793E;&#x533A;&#x7A0B;&#x5E8F;&#xFF0C;&#x662F;&#x56FD;&#x5185;&#x6700;&#x53D7;&#x6B22;&#x8FCE;&#x7684;&#x901A;&#x7528;&#x578B;&#x8BBA;&#x575B;&#x7A0B;&#x5E8F;&#x4E4B;&#x4E00;</p>
+<h2 id="&#x4F7F;&#x7528;php-fpmfastcgi&#x4F5C;&#x4E3A;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;9000"><a name="&#x4F7F;&#x7528;php-fpmfastcgi&#x4F5C;&#x4E3A;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;9000" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;php-fpmfastcgi&#x4F5C;&#x4E3A;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;9000"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x4F7F;&#x7528;php-fpm(FastCGI,&#x4F5C;&#x4E3A;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;:9000)</h2>
+<h3 id="&#x4EE5;centos-7&#x4E3A;&#x4F8B;&#xFF0C;&#x5C06;httpd&#x3001;php&#x3001;mariadb&#x7F6E;&#x4E8E;&#x540C;&#x4E00;&#x53F0;&#x4E3B;&#x673A;&#x4E4B;&#x4E0A;"><a name="&#x4EE5;centos-7&#x4E3A;&#x4F8B;&#xFF0C;&#x5C06;httpd&#x3001;php&#x3001;mariadb&#x7F6E;&#x4E8E;&#x540C;&#x4E00;&#x53F0;&#x4E3B;&#x673A;&#x4E4B;&#x4E0A;" class="anchor-navigation-ex-anchor" href="#&#x4EE5;centos-7&#x4E3A;&#x4F8B;&#xFF0C;&#x5C06;httpd&#x3001;php&#x3001;mariadb&#x7F6E;&#x4E8E;&#x540C;&#x4E00;&#x53F0;&#x4E3B;&#x673A;&#x4E4B;&#x4E0A;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.1. &#x4EE5;CentOS 7&#x4E3A;&#x4F8B;&#xFF0C;&#x5C06;httpd&#x3001;php&#x3001;mariadb&#x7F6E;&#x4E8E;&#x540C;&#x4E00;&#x53F0;&#x4E3B;&#x673A;&#x4E4B;&#x4E0A;</h3>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x5B89;&#x88C5;&#x6240;&#x9700;&#x73AF;&#x5883;</span>
+yum <span class="token function">install</span> httpd php-fpm php-mysql mariadb-server -y
+
+<span class="token comment"># &#x914D;&#x7F6E; apache &#x8F6C;&#x53D1; php</span>
+<span class="token function">vim</span> /etc/httpd/conf.d/fastcgi.conf
+<span class="token comment">####</span>
+DirectoryIndex index.php
+ProxyRequests Off
+ProxyPassMatch ^/<span class="token punctuation">(</span>.*<span class="token punctuation">\</span>.php<span class="token punctuation">)</span>$ fcgi://127.0.0.1:9000/var/www/html/<span class="token variable">$1</span> 
+<span class="token comment">####</span>
+* &#x53E6;&#x5916;&#xFF1A;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x4E3B;&#x673A;&#x6216;&#x8005;&#x865A;&#x62DF;&#x4E3B;&#x673A;<span class="token operator">&lt;</span>Directory<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/Directory<span class="token operator">&gt;</span>&#x4E2D;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;
+&#x200B;
+</code></pre>
+<p>ProxyRequests Off
+ProxyPassMatch ^/(.*.php)$ fcgi://127.0.0.1:9000/var/www/html/$1
+&#x200B;```</p>
+<h1 id="&#x914D;&#x7F6E;-php-&#x6D4B;&#x8BD5;&#x8FDE;&#x63A5;-mysql"><a name="&#x914D;&#x7F6E;-php-&#x6D4B;&#x8BD5;&#x8FDE;&#x63A5;-mysql" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;-php-&#x6D4B;&#x8BD5;&#x8FDE;&#x63A5;-mysql"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x914D;&#x7F6E; php &#x6D4B;&#x8BD5;&#x8FDE;&#x63A5; mysql,</h1>
+<p>vim /var/www/html/index.php</p>
+<h3 id=""><a name="" class="plugin-anchor" href="#"><i class="fa fa-link" aria-hidden="true"></i></a>#</h3>
+<p>&lt;?php
+    $conn = mysql_connect(&apos;127.0.0.1&apos;,&apos;root&apos;,&apos;&apos;);
+    if ($conn)
+        echo &quot;OK&quot;;
+    else
+        echo &quot;Fail&quot;;
+    mysql_close();
+?&gt;</p>
+<h3 id=""><a name="" class="plugin-anchor" href="#"><i class="fa fa-link" aria-hidden="true"></i></a>#</h3>
+<h1 id="&#x542F;&#x52A8;&#x670D;&#x52A1;"><a name="&#x542F;&#x52A8;&#x670D;&#x52A1;" class="anchor-navigation-ex-anchor" href="#&#x542F;&#x52A8;&#x670D;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x542F;&#x52A8;&#x670D;&#x52A1;</h1>
+<p>systemctl restart httpd
+systemctl start mariadb
+systemctl start php-fpm</p>
+<pre class="language-"><code>
+### &#x7F6E;&#x4E8E;&#x4E0D;&#x540C;&#x4E3B;&#x673A;
+
+WEB&#x670D;&#x52A1;&#x5668;(172.16.122.65)
+
+```bash
+yum install -y httpd
+# &#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x4E0E;&#x5355;&#x53F0;&#x4E3B;&#x673A;&#x7C7B;&#x4F3C;&#xFF0C;&#x53EA;&#x662F;IP&#x5730;&#x5740;&#x4E0D;&#x540C;&#x7F62;&#x4E86;
+vim /etc/httpd/conf.d/fastcgi.conf
+DirectoryIndex index.php
+ProxyRequests Off
+ProxyPassMatch ^/(.*\.php)$ fcgi://172.16.122.66:9000/data/www/$1 
+
+* &#x6CE8;&#x610F;&#xFF1A;&#x5728;HTTPD&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5FC5;&#x987B;&#x542F;&#x7528;proxy_fcgi_module&#x6A21;&#x5757;&#xFF0C;&#x5145;&#x5F53;PHP&#x5BA2;&#x6237;&#x7AEF;
+httpd &#x2013;M |grep fcgi 
+ # &#x663E;&#x793A;&#xFF1A;proxy_fcgi_module (shared)&#x5219;&#x6B63;&#x786E;
+# &#x6216;&#x8005;
+cat /etc/httpd/conf.modules.d/00-proxy.conf
+
+systemctl start httpd
+</code></pre><p>PHP&#x670D;&#x52A1;&#x5668;(172.16.122.66)</p>
+<pre class="language-"><code class="lang-bash">yum <span class="token function">install</span> php-fpm php-mysql
+<span class="token comment">#&#x4FEE;&#x6539;&#x7ED1;&#x5B9A;&#x7AEF;&#x53E3;&#xFF0C;&#x8BA9;&#x4ED6;&#x7ED1;&#x5B9A;&#x6240;&#x6709;IP</span>
+<span class="token function">vim</span> /etc/php.fpm.d/www.conf
+listen <span class="token operator">=</span> <span class="token number">9000</span>
+<span class="token comment">#&#x4FEE;&#x6539;&#x5141;&#x8BB8;IP&#x8BBF;&#x95EE;&#x7684;&#x9009;&#x9879;</span>
+listen.allowed_clients
+
+<span class="token function">mkdir</span> -pv /data/www/
+
+<span class="token function">vim</span> /data/www/index.php
+<span class="token comment">####</span>
+<span class="token operator">&lt;</span>?php
+    <span class="token variable">$conn</span> <span class="token operator">=</span> mysql_connect<span class="token punctuation">(</span><span class="token string">&apos;172.16.122.67&apos;</span>,<span class="token string">&apos;phpuser&apos;</span>,<span class="token string">&apos;phpuser&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$conn</span><span class="token punctuation">)</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;OK&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;Fail&quot;</span><span class="token punctuation">;</span>
+    mysql_close<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+?<span class="token operator">&gt;</span>
+<span class="token comment">####</span>
+
+systemctl start php
+</code></pre>
+<p>mysql&#x670D;&#x52A1;&#x5668;(172.16.122.67)</p>
+<pre class="language-"><code class="lang-bash">yum <span class="token function">install</span> mariadb mariadb-server
+<span class="token comment"># &#x542F;&#x52A8;&#x670D;&#x52A1;</span>
+systemctl start mariadb
+
+<span class="token comment">#&#x6267;&#x884C;&#x521D;&#x59CB;&#x5316;&#x811A;&#x672C;</span>
+mysql_ser_install
+
+<span class="token comment">#&#x521B;&#x5EFA;php&#x4F7F;&#x7528;&#x7684;&#x8D26;&#x6237;</span>
+GRANT ALL ON *.* TO phpuser@<span class="token string">&apos;172.16.122.%&apos;</span> IDENTIFIED BY <span class="token string">&apos;phpuser&apos;</span><span class="token punctuation">;</span>
+FLUSH PRIVILEGES<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x7F16;&#x8BD1;&#x5B89;&#x88C5;"><a name="&#x7F16;&#x8BD1;&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x8BD1;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. &#x7F16;&#x8BD1;&#x5B89;&#x88C5;</h2>
+<p><a href="&#x6E90;&#x7801;&#x7F16;&#x8BD1;&#x5B9E;&#x73B0;LAMP%20&#x5E76;&#x4E14;&#x57FA;&#x4E8E;Fastcgi&#x6A21;&#x578B;.md">&#x6E90;&#x7801;&#x7F16;&#x8BD1;&#x5B9E;&#x73B0;LAMP &#x5E76;&#x4E14;&#x57FA;&#x4E8E;Fastcgi&#x6A21;&#x578B;</a></p>
+<h2 id="&#x4E00;&#x952E;&#x5B89;&#x88C5;&#x5305;"><a name="&#x4E00;&#x952E;&#x5B89;&#x88C5;&#x5305;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x952E;&#x5B89;&#x88C5;&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. &#x4E00;&#x952E;&#x5B89;&#x88C5;&#x5305;</h2>
+<ol>
+<li><p>&#x4E3B;&#x9875;&#xFF1A;<a href="https://lamp.sh/" target="_blank">https://lamp.sh/</a></p>
+<ol>
+<li>&#x5B89;&#x88C5;&#x6B65;&#x9AA4;&#x8BF4;&#x660E;&#xFF1A;<a href="https://lamp.sh/install.html" target="_blank">https://lamp.sh/install.html</a></li>
+<li>&#x4E0B;&#x8F7D;&#x9875;&#xFF1A;<a href="https://lamp.sh/download.html" target="_blank">https://lamp.sh/download.html</a></li>
+</ol>
+</li>
+<li><p>&#x4E3B;&#x9875;&#xFF1A;<a href="https://lnmp.org/" target="_blank">https://lnmp.org/</a></p>
+<ol>
+<li>&#x5B89;&#x88C5;&#x6B65;&#x9AA4;&#x8BF4;&#x660E;&#xFF1A;<a href="https://lnmp.org/install.html" target="_blank">https://lnmp.org/install.html</a></li>
+<li>&#x4E0B;&#x8F7D;&#x9875;&#xFF1A;<a href="https://lnmp.org/download.html" target="_blank">https://lnmp.org/download.html</a></li>
+</ol>
+</li>
+<li><p>&#x4E3B;&#x9875;&#xFF1A;<a href="http://yumlamp.com/" target="_blank">http://yumlamp.com/</a></p>
+</li>
+<li>phpstudy for linux&#x4E00;&#x952E;&#x5B89;&#x88C5;&#x5305;&#xFF1A;<a href="http://lamp.phpstudy.net/" target="_blank">http://lamp.phpstudy.net/</a></li>
+</ol>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; AGou 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-11-26 18:45:37
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="LNMP.html" class="navigation navigation-prev " aria-label="Previous page: LNMP">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Docker&K8s/" class="navigation navigation-next " aria-label="Next page: 容器及容器编排">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"LAMP","level":"1.8.2","depth":2,"next":{"title":"容器及容器编排","level":"1.9","depth":1,"path":"Docker&K8s/README.md","ref":"Docker&K8s/README.md","articles":[{"title":"Docker","level":"1.9.1","depth":2,"path":"Docker&K8s/Docker/Docker.md","ref":"Docker&K8s/Docker/Docker.md","articles":[{"title":"Docker","level":"1.9.1.1","depth":3,"path":"Docker&K8s/Docker/Docker.md","ref":"Docker&K8s/Docker/Docker.md","articles":[]}]},{"title":"K8s","level":"1.9.2","depth":2,"path":"Docker&K8s/K8s/README.md","ref":"Docker&K8s/K8s/README.md","articles":[{"title":"K8s基础知识","level":"1.9.2.1","depth":3,"path":"Docker&K8s/K8s/K8s基础知识.md","ref":"Docker&K8s/K8s/K8s基础知识.md","articles":[]},{"title":"K8s安装与部署","level":"1.9.2.2","depth":3,"path":"Docker&K8s/K8s/K8s安装与部署.md","ref":"Docker&K8s/K8s/K8s安装与部署.md","articles":[]}]}]},"previous":{"title":"LNMP","level":"1.8.1","depth":2,"path":"Common_Framework/LNMP.md","ref":"Common_Framework/LNMP.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github@^2.0.0","edit-link@^2.0.2","anchors@^0.7.1","include-codeblock@^3.0.2","tbfed-pagefooter@^0.0.1","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","prism","-highlight","insert-logo","-lunr","-search","search-pro","splitter","lightbox","github-buttons","-sharing","sharing-plus","donate","code","klipse","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © AGou 2020","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/AGou-ops"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","instapaper","linkedin","pocket","stumbleupon","twitter"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"https://agou-ops.github.io/images/alipay.png","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://agou-ops.github.io/images/wechatpay.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"lightbox":{"jquery":true,"sameUuid":false},"github-buttons":{"repo":"AGou-ops/myStudyNote","types":["star","watch","fork"],"size":"small"},"expandable-chapters-small":{},"klipse":{"myConfigKey":"it's the default value"},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["douban","facebook","google","hatenaBookmark","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","vk","weibo","pocket","stumbleupon","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"edit-link":{"label":"Edit This Page","base":"https://github.com/AGou-ops/myStudyNote"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"insert-logo":{"style":"background: none; max-height: 50px; min-height: 50px","url":"https://s2.ax1x.com/2019/12/10/QBD0xO.jpg"}},"theme":"default","author":"AGou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"AGou's StudyNote","language":"zh-hans","output.name":"site","links":{"sidebar":{"◆点击进入我的个人博客":"http://agou-ops.github.io"}},"gitbook":"3.2.3","description":"岂能尽如人意，但求无愧我心。"},"file":{"path":"Common_Framework/LAMP.md","mtime":"2019-11-26T10:45:37.582Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-08T13:03:27.571Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

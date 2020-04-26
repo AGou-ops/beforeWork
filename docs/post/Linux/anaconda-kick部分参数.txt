@@ -1,0 +1,140 @@
+Kickstart文件参数说明
+1、命令段必选参数
+authconfig：认证方式配置
+authconfig  --enableshadow  --passalgo=sha512
+
+bootloader：定义bootloader的安装位置及相关配置
+bootloader  --location=mbr  --driveorder=sda  --append="crashkernel=auto rhgb 
+quiet"
+
+--append= 可以指定内核参数
+
+--driveorder= 设定设备BIOS中的开机设备启动顺序
+
+--location= 设定引导记录的位置； mbr：默认值；partition：将boot loader安装于包含kernel的分区超级快
+
+keyboard：设置键盘类型
+keyboard us
+
+lang：语言类型
+lang  zh_CN.UTF-8
+
+part：分区布局；
+part  /boot  --fstype=ext4  --size=500
+part pv.008 --size=10240
+volgroup vg0 --pesize=8192 pv.008
+logvol / --fstype=ext4 --name=root --vgname=vg0 --size=1024
+logvol swap --name=swap --vgname=vg0 --size=1024
+logvol /usr --fstype=ext4 --name=usr --vgname=vg0 --size=1024
+logvol /var --fstype=ext4 --name=var --vgname=vg0 --size=2048
+part  <mntpoint>|swap|pv.id|rdid.id  option
+
+mntpoint:挂载点，是在创建普通分区时指定新分区挂载位置的项；挂载点需要格式正确
+
+swap： 创建swap分区；
+
+raid.id:  表示创建的分区类型为raid型；必须用id号进行唯一区别；
+
+pv.id：  表示所创建的分区类型为LVM型；必须用唯一id号进行区别；
+
+--size=  设置分区的最小值，默认单位为M，但是不能写单位；
+
+--grow  让分区自动增长利用可用的磁盘空间，或是增长到设置的maxsize值；
+
+--maxsize 设置分区自动增长(grow)时的最大容量值，以M为单位，但不能写单位；
+
+--onpart=/--usepart=     设置使用原有的分区；
+
+--noformat    设置不格式化指定的分区，在跟—onpart一同使用时，可以避免删除原有分区上的数据，在新安装的系统中保留使用数据；
+
+--asprimary    强制制定该分区为主分区；若指定失败，分区会失败，导致安装停止；
+
+--fstype=    新增普通分区时指定分区的类型，可以为ext2、ext3、ext4、swap、vfat及hfs；
+
+--ondisk=/--ondrive=     设定该分区创建在一个具体的磁盘上；
+
+--start   指定分区以磁盘上那个磁道开始；需要跟--ondisk参数一块使用；
+
+--end    指定分区以磁盘上那个磁道结束；需要跟上述两个参数一起使用；
+
+--recommended：让系统自行决定分区的大小；在创建swap分区时，若RAM<2G，则分区大小为2*RAM；若RAM>=2G时，分区大小为RAM+2G；
+
+--bytes-pre-inode=    指定分区格式化时inode的大小；默认值为4096
+
+--fsoptions=    指定创建fstab文件时该分区挂载参数项；
+
+ 
+
+rootpw：管理员密码
+rootpw   --iscrypted
+
+
+$6$4Yh15kMGDWOPtbbW$SGax4DsZwDAz4201.O97WvaqVJfHcISsSQEokZH054juNnoBmO/
+rmmA7H8ZsD08.fM.Z3Br/67Uffod1ZbE0s.
+
+timezone：时区
+timezone  Asia/Shanghai
+
+ 
+
+补充：分区相关的其它指令
+
+clearpart：清除分区
+clearpart  --none  --drives=sda：清空磁盘分区；
+
+在建立新分区前清空系统上原有的分区表，默认不删除分区
+
+clearpart --all
+
+clearpart --drives=hda,hdb --all --initlabel
+
+-all 擦除系统上原有所有分区；
+
+--drives 删除指定驱动器上的分区
+
+--initlabel 初始化磁盘卷标为系统架构的默认卷标
+
+--linux 擦除所有的linux分区
+
+--none（default）不移除任何分区
+
+ 
+
+volgroup：创建卷组
+volgroup  myvg  --pesize=4096  pv.008002
+
+logvol：创建逻辑卷
+logvol  /home  --fstype=ext4  --name=lv_home  --vgname=myvg  --size=5120
+
+ 
+
+生成加密密码的方式：
+
+~]# openssl  passwd  -1  -salt `openssl rand -hex 4`
+
+生成的密码可以直接粘贴复制到上面rootpw 后即可生效
+
+ 
+
+2、可选命令：
+install  OR  upgrade：安装或升级；
+text：安装界面类型，text为tui，默认为GUI
+network：配置网络接口
+network  --onboot yes  --device eth0  --bootproto dhcp  --noipv6
+
+firewall：防火墙
+firewall  --disabled
+
+selinux：SELinux
+selinux --disabled
+
+halt、poweroff或reboot：安装完成之后的行为；
+repo：指明安装时使用的repository；
+repo  --name="CentOS"   --baseurl=cdrom:sr0  --cost=100
+
+url： 指明安装时使用的repository，但为url格式；可选，指明安装源为远程的ftp、http方式安装
+url --url=http://172.16.0.1/cobbler/ks_mirror/CentOS-6.7-x86_64/        
+
+url --url ftp://<username>:<password>@install.example.com/iso
+
+url --url http://install.example.com/iso

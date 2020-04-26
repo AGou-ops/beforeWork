@@ -1,0 +1,117 @@
+ 
+{
+    "title": "AGou's StudyNote",
+    "description": "岂能尽如人意，但求无愧我心。",
+    "author": "AGou",
+    "output.name": "site",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "root": ".",
+    "links": {
+        "sidebar": {
+            "◆点击进入我的个人博客": "http://agou-ops.github.io"
+        }
+    },
+    "plugins": [
+        "github@^2.0.0",
+        "edit-link@^2.0.2",
+        "anchors@^0.7.1",
+        "include-codeblock@^3.0.2",
+        "tbfed-pagefooter@^0.0.1",
+        "expandable-chapters-small@^0.1.7",
+        "anchor-navigation-ex@0.1.8",
+        "prism", "-highlight",
+        "insert-logo",
+        "-lunr", "-search", "search-pro",
+        "splitter",
+        "lightbox",
+        "github-buttons",
+        "-sharing", "sharing-plus",
+        "donate",
+        "code",
+        "klipse"
+    ],
+
+    "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
+        "github": {
+            "url": "https://github.com/AGou-ops"
+        },
+        "include-codeblock": {
+            "template": "ace",
+            "unindent": true,
+            "edit": true
+        },
+        "tbfed-pagefooter": {
+            "copyright": "Copyright © AGou 2020",
+            "modify_label": "该文件修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "edit-link": {
+            "base": "https://github.com/AGou-ops/myStudyNote",
+            "label": "Edit This Page"
+        },
+        "anchor-navigation-ex": {
+            "isRewritePageTitle": true,
+            "tocLevel1Icon": "fa fa-hand-o-right",
+            "tocLevel2Icon": "fa fa-hand-o-right",
+            "tocLevel3Icon": "fa fa-hand-o-right"
+        },
+        "insert-logo": {
+            "url": "https://s2.ax1x.com/2019/12/10/QBD0xO.jpg",
+            "style": "background: none; max-height: 50px; min-height: 50px"
+        },
+        "prism": {
+            "css": [
+              "prismjs/themes/prism-tomorrow.css"
+            ]
+        },
+        "github-buttons": {
+            "repo": "AGou-ops/myStudyNote",
+            "types": [
+                "star",
+                "watch",
+                "fork"
+            ],
+            "size": "small"
+        },
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": true,
+            "qzone": true,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": true,
+            "whatsapp": false,
+            "all": [
+                "douban", "facebook", "google", "hatenaBookmark", 
+                "instapaper", "linkedin","twitter", "weibo", 
+                "messenger","qq", "qzone","viber","vk","weibo",
+                "pocket", "stumbleupon","whatsapp"
+            ]
+        },
+        "donate": {
+            "wechat": "https://agou-ops.github.io/images/wechatpay.png",
+            "alipay": "https://agou-ops.github.io/images/alipay.png",
+            "title": "",
+            "button": "打赏",
+            "alipayText": "支付宝打赏",
+            "wechatText": "微信打赏"
+        },
+        "code": {
+            "copyButtons": true
+        }
+    }
+}
