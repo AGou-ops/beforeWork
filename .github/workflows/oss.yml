@@ -7,11 +7,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: manyuanrong/setup-ossutil@v1.0
-      with:
-        endpoint: "oss-cn-hangzhou.aliyuncs.com"
-        access-key-id: ${{ secrets.ACCESS_KEY_ID }}
-        access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
-        sts-token: ""
-    - run: ossutil cp -rf ./ oss://agou-ops/beforeWork/
+      - uses: actions/checkout@master
+      - uses: manyuanrong/setup-ossutil@v1.0
+        with:
+          endpoint: "oss-cn-hangzhou.aliyuncs.com"
+          access-key-id: ${{ secrets.ACCESS_KEY_ID }}
+          access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
+          sts-token: ""
+      - run: ossutil cp -rf ./ oss://agou-ops/beforeWork/
