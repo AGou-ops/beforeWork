@@ -29,6 +29,48 @@ $ docker-compose --version
 docker-compose version 1.25.5, build 1110ad01
 ```
 
+## Docker 常用命令及组合
+
+### docker-compose相关命令
+
+```shell
+# 构建镜像
+docker-compose build
+# 构建镜像，--no-cache表示不用缓存，否则在重新编辑Dockerfile后再build可能会直接使用缓存而导致新编辑内容不生效
+docker-compose build --no-cache
+# config 校验文件格式是否正确
+docker-compose -f docker-compose.yml config
+# 运行服务
+ocker-compose up -d
+# 启动/停止服务
+docker-compose start/stop 服务名
+# 停止服务
+docker-compose down
+# 查看容器日志
+docker logs -f 容器ID
+# 查看镜像
+docker-compose images
+# 拉取镜像
+docker-compose pull 镜像名
+```
+
+### 常用shell组合
+
+```shell
+# 删除所有容器
+docker stop `docker ps -q -a` | xargs docker rm
+# 删除所有标签为none的镜像
+docker images|grep \<none\>|awk '{print $3}'|xargs docker rmi
+# 查找容器IP地址
+docker inspect 容器名或ID | grep "IPAddress"
+# 创建网段, 名称: mynet, 分配两个容器在同一网段中 (这样子才可以互相通信)
+docker network create mynet
+docker run -d --net mynet --name container1 my_image
+docker run -it --net mynet --name container1 another_image
+```
+
+详细参考：[Docker Compose 命令与配置详解](Docker Compose 命令与配置详解)
+
 ## 快速入门 Compose & Wordpress
 
 创建项目文件夹：
@@ -81,7 +123,7 @@ docker-compose up -d
 
 > 该示例来源于官方文档：https://docs.docker.com/compose/wordpress/
 
-## Docker Compose 常用命令与配置
+## Docker Compose 命令与配置详解
 
 ### 常用命令参数
 
