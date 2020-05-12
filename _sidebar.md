@@ -81,5 +81,5 @@
   * [Rsync Inotify Sersync](post/rsync%20+%20inotify(sersync).md)
   * [SSH Tunnel](post/SSH%20Tunnel.md)
   * [Wire Guard VPN For Ubuntu](post/WireGuard%20VPN%20for%20Ubuntu.md)
-  * ****External Links****
+  * ***External Links***
   * **Nothing Here.**
