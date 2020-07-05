@@ -1,1 +1,0 @@
-https://linuxize.com/post/how-to-set-up-an-openvpn-server-on-ubuntu-18-04/

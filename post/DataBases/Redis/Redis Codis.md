@@ -99,15 +99,85 @@ codis-admin  codis-fe         codis-proxy  redis-benchmark  redis-sentinel
 
 ## redis-codis 集群手动搭建
 
-| IP                          | 服务                                                         |
-| --------------------------- | ------------------------------------------------------------ |
-| 172.16.1.135 & 172.16.1.136 | codis-server(主从)【3台】，codis-dashboard【1台】，codis-proxy【3台】，codis-fe【1台】 |
-| 172.16.1.135 & 172.16.1.136 | zookeeper                                                    |
+| IP                                         | 服务                                                         |
+| ------------------------------------------ | ------------------------------------------------------------ |
+| 172.16.1.128 & 172.16.1.134 & 172.16.1.138 | codis-server(主从)【3台】，codis-dashboard【1台】，codis-proxy【3台】，codis-fe【1台】 |
+| 172.16.1.128 & 172.16.1.134 & 172.16.1.138 | zookeeper                                                    |
 
 1. 编译安装 codis 参考上面的[Codis 编译安装](#Codis 编译安装)
 2. 编译安装 zk 参考 [zookeeper 部署安装](../../Zookeeper/Zookeeper Basic.md)
 
+编辑`zookeeper`的配置文件`zoo.conf`，添加以下内容：
 
+```bash
+...
+dataDir=/data/zookeeper
+dataLogDir=/var/log/zookeeper
+...
+server.1=172.16.1.128:2888:3888
+server.2=172.16.1.134:2888:3888
+server.3=172.16.1.138:2888:3888
+```
+
+创建数据目录`mkdir -p /data/zookeeper`，`mkdir -p /var/log/zookeeper`
+
+设置环境变量，在`/etc/profile`文件中添加以下内容：
+
+```bash
+export ZOOKEEPER_HOME=/usr/local/zookeeper
+export PATH=$PATH:$ZOOKEEPER_HOME/bin
+```
+
+使之生效，`source /etc/profile`
+
+创建`myid`文件，设置zookeeper的id，和`server.ID`对应，在` dataDir `指定的目录下 (即 `/data/zookeeper`目录) 创建名为 myid 的文件， 文件内容和 `zoo.cfg `中当前机器的 id 一致：
+
+```bash
+# 在第1台zookeeper（172.16.1.128）上设置id=1
+echo "1" >/data/zookeeper/myid
+# 在第2台zookeeper（172.16.1.134）上设置id=2 
+echo "2" >/data/zookeeper/myid
+# 在第3台zookeeper（172.16.1.138）上设置id=3
+echo "3" >/data/zookeeper/myid
+```
+
+分别启动三台`zk`：
+
+```bash
+[root@node02 conf]\# zkServer.sh start
+/usr/bin/java
+ZooKeeper JMX enabled by default
+Using config: /usr/local/zookeeper/bin/../conf/zoo.cfg
+Starting zookeeper ... STARTED
+...
+```
+
+查看 zk 集群状态：
+
+```bash
+[root@master zookeeper]\# zkServer.sh status
+/usr/bin/java
+ZooKeeper JMX enabled by default
+Using config: /usr/local/zookeeper/bin/../conf/zoo.cfg
+Client port found: 2181. Client address: localhost.
+Mode: follower
+
+[root@node01 ~]\# zkServer.sh status
+/usr/bin/java
+ZooKeeper JMX enabled by default
+Using config: /usr/local/zookeeper/bin/../conf/zoo.cfg
+Client port found: 2181. Client address: localhost.
+Mode: leader
+
+[root@node02 ~]\# zkServer.sh status
+/usr/bin/java
+ZooKeeper JMX enabled by default
+Using config: /usr/local/zookeeper/bin/../conf/zoo.cfg
+Client port found: 2181. Client address: localhost.
+Mode: follower
+```
+
+...待续。。。
 
 ## 通过 ansible 快速部署集群
 

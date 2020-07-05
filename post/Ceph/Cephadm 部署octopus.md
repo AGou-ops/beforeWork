@@ -57,10 +57,7 @@ cephadm add-repo --release octopus
 
 ```bash
 # ceph status
-
 ```
-
-
 
 将主机添加到集群中
 

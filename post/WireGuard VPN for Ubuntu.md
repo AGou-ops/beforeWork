@@ -249,6 +249,11 @@ sudo wg-quick down wg0
 
 ![wg-2](https://s1.ax1x.com/2020/04/20/JQBuAP.png)
 
+## 一键安装 wireguard
+
+* https://github.com/angristan/wireguard-install
+* https://github.com/l-n-s/wireguard-install
+
 ## 参考链接
 
 * wireguard Quick Start : https://www.wireguard.com/quickstart/

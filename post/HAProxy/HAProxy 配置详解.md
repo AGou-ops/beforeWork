@@ -97,8 +97,6 @@ haproxy 配置中分成五部分内容，分别如下：
 - tcp-request content: tcp层过滤，四层过滤
 ```
 
-
-
 ## 综合配置
 
 ```bash

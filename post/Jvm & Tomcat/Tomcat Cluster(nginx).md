@@ -79,7 +79,7 @@ tomcat9  tomcat-test
 查看端口监听情况：
 
 ```bash
-[root@stor1 tomcat-test]# ss -tnulp
+[root@stor1 tomcat-test]\# ss -tnulp
 Netid State      Recv-Q Send-Q                  Local Address:Port                                 Peer Address:Port              
 udp   UNCONN     0      0                                   *:68                                              *:*                   users:(("dhclient",pid=791,fd=6))
 tcp   LISTEN     0      128                                 *:22                                              *:*                   users:(("sshd",pid=977,fd=3))
