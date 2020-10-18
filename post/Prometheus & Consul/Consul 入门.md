@@ -1,3 +1,5 @@
+# Consul 入门 
+
 ## Consul 简介
 
 Consul 是基于 GO 语言开发的开源工具，主要面向分布式，服务化的系统提供服务注册、服务发现和配置管理的功能。Consul 提供服务注册/发现、健康检查、Key/Value存储、多数据中心和分布式一致性保证等功能。之前我们通过 Prometheus 实现监控，当新增一个 Target 时，需要变更服务器上的配置文件，即使使用 file_sd_configs 配置，也需要登录服务器修改对应 Json 文件，会非常麻烦。不过 Prometheus 官方支持多种自动服务发现的类型，其中就支持 Consul。

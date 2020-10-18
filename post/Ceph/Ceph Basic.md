@@ -1,6 +1,8 @@
+# Ceph Basic    
+
 > 转载自：https://www.cnblogs.com/flytor/p/11386590.html
 
-# Ceph 概述和理论
+## Ceph 概述和理论
 
 1.1 Ceph概述
 

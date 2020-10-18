@@ -1,4 +1,6 @@
-# CentOS7 安装配置 OpenVPN
+# OpenVPN for CentOS 
+
+## CentOS7 安装配置 OpenVPN
 
 ## OpenVPN 简介
 

@@ -1,3 +1,5 @@
+# Redis Codis    
+
 # Redis Codis 
 
 [TOC]
@@ -218,3 +220,4 @@ codis-dashboard 也是相同的道理，会使用 `--host-admin` 地址向外部
 * Golang installation: https://golang.org/doc/install
 * Redis Codis 部署安装：https://www.cnblogs.com/ExMan/p/11351621.html
 * Redis——redis集群方案之codis集群的搭建部署：https://blog.csdn.net/bmengmeng/article/details/99693040
+* https://wsgzao.github.io/post/codis/

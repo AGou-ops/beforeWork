@@ -1,3 +1,5 @@
+# HAProxy Basic 
+
 ## HAProxy简介
 
 HAProxy提供高可用性、负载均衡以及基于TCP和HTTP应用的代理，支持虚拟主机，它是免费、快速并且可靠的一种解决方案。

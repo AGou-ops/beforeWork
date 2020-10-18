@@ -1,3 +1,7 @@
+# Ceph RGW    
+
+
+
 ## Ceph RGW 架构简介
 
   RGW就是提供对象存储的网关，也即对象存储网关。所谓对象存储网关，也就是对象存储的入口，**本质上是一个HTTP服务器**，与Nginx和Apache无异。通过这个入口，用户可以通过HTTP协议，以RESTful的方式访问Ceph的对象存储。 对象存储网关实际上是*调用`librados`的API*来实现数据的存储和读取，而该网关同时提供了**兼容AWS S3和OpenStack Swift的对象存储访问接口（API）**。

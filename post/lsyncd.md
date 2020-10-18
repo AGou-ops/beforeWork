@@ -1,3 +1,5 @@
+# lsyncd 
+
 ## lsyncd 简介
 
 Lsyncd功能跟Inotify和Sersync相同，属于实时同步工具，但是Lsyncd功能更加强大，Lysncd 实际上是lua语言封装了 inotify 和 rsync 工具，采用了 Linux 内核 *（2.6.13 及以后）里的 inotify 触发机制，然后通过rsync去差异同步，达到实时的效果。Lsyncd最强大之处在于简单高效传输海量数据并且Lsyncd支持多种工作模式。

@@ -1,3 +1,5 @@
+# ELK basic 
+
 ## ES 集群部署
 
 环境：
@@ -176,6 +178,15 @@ bin/logstash -e 'input { stdin {} } output { stdout {} }'
 ```
 
 启动`kibana`，`bin/kibana`
+
+## 其他
+
+官方均提供有制作好的`RPM`、`DEB`和适用于`Windows`下的二进制包，可以直接下载安装使用：
+
+```bash
+# 以redhat系为例
+yum localinstall -y kibana-7.7.1-x86_64.rpm
+```
 
 ## 附：es 环境脚本
 

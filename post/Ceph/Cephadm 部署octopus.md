@@ -1,3 +1,6 @@
+# Cepha   部署octopus    
+
+
 获取`cephadm`部署工具
 
 ```bash

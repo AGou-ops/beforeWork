@@ -1,3 +1,5 @@
+# PowerDNS 
+
 ## PowerDNS 简介
 
 PowerDNS 是一个跨平台的开源DNS服务组件，PowerDNS同时有Win32和Linux/Unix的版本。 PowerDNS在Win32下使用 Access的mdb文件记录DNS信息，而在Linux/Unix下则使用MySQL来记录DNS信息。无论是mdb亦或MySQL，备份是非常方便的 事情。

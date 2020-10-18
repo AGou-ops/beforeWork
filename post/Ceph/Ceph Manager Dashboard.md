@@ -1,3 +1,6 @@
+# Ceph Manager Dashboar     
+
+
 ## Ceph Manager Dashboard 简介
 
 Ceph仪表板是基于Web的内置Ceph管理和监视应用程序，用于管理集群的各个方面和对象。它作为Ceph Manager守护程序模块实现。

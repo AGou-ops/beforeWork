@@ -1,3 +1,5 @@
+# MySQL Auth CLI    
+
 [TOC]
 
 ### 查看用户权限

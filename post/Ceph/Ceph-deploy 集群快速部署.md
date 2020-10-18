@@ -1,4 +1,4 @@
-# 1. Ceph集群部署
+# Ceph- eploy 集群快速部署    
 
 ## 1.1 安装环境介绍
 
@@ -298,7 +298,7 @@ ID CLASS WEIGHT  TYPE NAME       STATUS REWEIGHT PRI-AFF
 
 另外，还介绍了Ceph另外当前集群只有一个monitor节点，存在单点故障，当node-1节点故障时，整个集群都会处于不可用状态，因此需要部署高可用集群，以避免集群存在单点故障，保障业务的高可用性，后续章节来介绍monitor节点的扩容。
 
-# 参考文档
+## 参考文档
 
 * ceph-deploy：https://docs.ceph.com/docs/master/install/ceph-deploy/quick-start-preflight/#ceph-deploy-setup
 * ceph-admin：https://docs.ceph.com/docs/master/cephadmin

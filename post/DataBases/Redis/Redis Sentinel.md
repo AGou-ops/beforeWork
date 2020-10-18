@@ -1,4 +1,4 @@
-# Redis Sentinel
+# Resis Sentinel    
 
 ## Sentinel 简介
 

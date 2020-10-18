@@ -1,3 +1,5 @@
+# DHCP 简单使用 
+
 ## 简介
 
 **动态主机设置协议**（英语：**D**ynamic **H**ost **C**onfiguration **P**rotocol，缩写：**DHCP**）是一个用于[IP](https://zh.wikipedia.org/wiki/网际协议)网络的[网络协议](https://zh.wikipedia.org/wiki/网络协议)，位于[OSI模型](https://zh.wikipedia.org/wiki/OSI模型)的[应用层](https://zh.wikipedia.org/wiki/应用层)，使用[UDP](https://zh.wikipedia.org/wiki/用户数据报协议)协议工作，主要有两个用途：

@@ -1,3 +1,5 @@
+# Nginx 高级模块及优化 
+
 ## ngx_stream_core_module
 
 默认情况下该模块不会自动安装,需要在编译是使用with来安装. 检查当前nginx是否安装有该模块,`rpm -qa nginx | grep mod-stream`

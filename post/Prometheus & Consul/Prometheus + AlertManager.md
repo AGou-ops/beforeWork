@@ -1,3 +1,5 @@
+# Prometheus + AlertManager 
+
 ## AlertManager 简介
 
 Alertmanager 主要用于接收 Prometheus 发送的告警信息，它支持丰富的告警通知渠道，例如邮件、微信、钉钉、Slack 等常用沟通工具，而且很容易做到告警信息进行去重，降噪，分组等，是一款很好用的告警通知系统。

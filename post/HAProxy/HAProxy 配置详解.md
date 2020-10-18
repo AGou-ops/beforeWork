@@ -1,3 +1,5 @@
+# HAProxy 配置详解 
+
 完整配置选项参考:[configuration.txt](./configuration.txt)
 
 ## 配置详解

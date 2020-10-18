@@ -1,3 +1,5 @@
+# rsync + inotify(sersync) 
+
 ## rsync 和 inotify 简介
 
 `rsync`是linux系统下的数据镜像备份工具。使用快速增量备份工具Remote Sync可以远程同步，支持本地复制，或者与其他SSH、rsync主机同步。

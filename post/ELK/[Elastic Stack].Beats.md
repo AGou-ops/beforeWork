@@ -1,3 +1,5 @@
+# [Elastic Stack].Beats 
+
 ## Beats 简介
 
 Beats 是一个免费且开放的平台，集合了多种单一用途数据采集器。它们从成百上千或成千上万台机器和系统向 Logstash 或 Elasticsearch 发送数据。

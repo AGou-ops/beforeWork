@@ -1,3 +1,6 @@
+# ceph 部署问题汇总    
+
+
 ## ceph部署问题汇总
 
 1. 运行`ceph-deploy --verion`或者相关命令出现`Traceback (most recent call last):
