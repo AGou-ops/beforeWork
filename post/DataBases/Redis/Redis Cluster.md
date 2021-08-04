@@ -32,6 +32,14 @@ Redis-cluster分片策略，是用来解决key存储位置的。
 
 集群中的每个主节点都可以处理0个至16383个槽，当16384个槽都有某个节点在负责处理时，集群进入上线状态，并开始处理客户端发送的数据命令请求。
 
+Redis 集群使用数据分片（sharding）而非一致性哈希（consistency hashing）来实现： 一个 Redis 集群包含 16384 个哈希槽（hash slot）， 数据库中的每个键都属于这 16384 个哈希槽的其中一个， 集群使用公式 CRC16(key) % 16384 来计算键 key 属于哪个槽， 其中 CRC16(key) 语句用于计算键 key 的 CRC16 校验和 。
+
+1. 节点 A 负责处理 0 号至 5500 号哈希槽。
+2. 节点 B 负责处理 5501 号至 11000 号哈希槽。
+3. 节点 C 负责处理 11001 号至 16384 号哈希槽。
+
+![null](http://bak.agou-ops.top/uploads/redis/images/m_4d0eddb4cbb10a4882dafd941142339a_r.png)
+
 ### 集群重定向
 
 由于Redis集群无中心节点，请求会随机发给任意主节点；
@@ -165,6 +173,150 @@ e87819de3b319f03448f2d24ea4c2a24f543aae8 172.16.1.135:7004@17004 slave 542db4615
 
 slave1 已成功上任～
 
+## 附录：快速搭建测试环境
+
+```bash
+# 创建多实例目录
+[root@db01 ~]#  mkdir -p /data/700{0..5}
+
+# 编辑多实例配置文件
+[root@db01 ~]#  vim /data/7000/redis.conf
+port 7000
+daemonize yes
+pidfile /data/7000/redis.pid
+loglevel notice
+logfile "/data/7000/redis.log"
+dbfilename dump.rdb
+dir /data/7000
+protected-mode no
+cluster-enabled yes
+cluster-config-file nodes.conf
+cluster-node-timeout 5000
+appendonly yes
+
+
+[root@db01 ~]#  vim /data/7001/redis.conf
+port 7001
+daemonize yes
+pidfile /data/7001/redis.pid
+loglevel notice
+logfile "/data/7001/redis.log"
+dbfilename dump.rdb
+dir /data/7001
+protected-mode no
+cluster-enabled yes
+cluster-config-file nodes.conf
+cluster-node-timeout 5000
+appendonly yes
+
+
+[root@db01 ~]#  vim /data/7002/redis.conf
+port 7002
+daemonize yes
+pidfile /data/7002/redis.pid
+loglevel notice
+logfile "/data/7002/redis.log"
+dbfilename dump.rdb
+dir /data/7002
+protected-mode no
+cluster-enabled yes
+cluster-config-file nodes.conf
+cluster-node-timeout 5000
+appendonly yes
+
+
+
+[root@db01 ~]#  vim /data/7003/redis.conf
+port 7003
+daemonize yes
+pidfile /data/7003/redis.pid
+loglevel notice
+logfile "/data/7003/redis.log"
+dbfilename dump.rdb
+dir /data/7003
+protected-mode no
+cluster-enabled yes
+cluster-config-file nodes.conf
+cluster-node-timeout 5000
+appendonly yes
+
+
+
+[root@db01 ~]#  vim /data/7004/redis.conf
+port 7004
+daemonize yes
+pidfile /data/7004/redis.pid
+loglevel notice
+logfile "/data/7004/redis.log"
+dbfilename dump.rdb
+dir /data/7004
+protected-mode no
+cluster-enabled yes
+cluster-config-file nodes.conf
+cluster-node-timeout 5000
+appendonly yes
+
+
+[root@db01 ~]#  vim /data/7005/redis.conf
+port 7005
+daemonize yes
+pidfile /data/7005/redis.pid
+loglevel notice
+logfile "/data/7005/redis.log"
+dbfilename dump.rdb
+dir /data/7005
+protected-mode no
+cluster-enabled yes
+cluster-config-file nodes.conf
+cluster-node-timeout 5000
+appendonly yes
+
+# 启动节点
+[root@db01 ~]#  redis-server /data/7000/redis.conf 
+[root@db01 ~]#  redis-server /data/7001/redis.conf 
+[root@db01 ~]#  redis-server /data/7002/redis.conf 
+[root@db01 ~]#  redis-server /data/7003/redis.conf 
+[root@db01 ~]#  redis-server /data/7004/redis.conf 
+[root@db01 ~]#  redis-server /data/7005/redis.conf 
+
+# 检查端口
+[root@db01 ~]#  netstat -lntup|grep 700*
+tcp        0      0 0.0.0.0:17003               0.0.0.0:*                   LISTEN      7433/redis-server *
+tcp        0      0 0.0.0.0:17004               0.0.0.0:*                   LISTEN      7437/redis-server *
+tcp        0      0 0.0.0.0:17005               0.0.0.0:*                   LISTEN      7443/redis-server *
+tcp        0      0 0.0.0.0:7000                0.0.0.0:*                   LISTEN      7423/redis-server *
+tcp        0      0 0.0.0.0:7001                0.0.0.0:*                   LISTEN      7425/redis-server *
+tcp        0      0 0.0.0.0:7002                0.0.0.0:*                   LISTEN      7429/redis-server *
+tcp        0      0 0.0.0.0:7003                0.0.0.0:*                   LISTEN      7433/redis-server *
+tcp        0      0 0.0.0.0:7004                0.0.0.0:*                   LISTEN      7437/redis-server *
+tcp        0      0 0.0.0.0:7005                0.0.0.0:*                   LISTEN      7443/redis-server *
+tcp        0      0 0.0.0.0:17000               0.0.0.0:*                   LISTEN      7423/redis-server *
+tcp        0      0 0.0.0.0:17001               0.0.0.0:*                   LISTEN      7425/redis-server *
+tcp        0      0 0.0.0.0:17002               0.0.0.0:*                   LISTEN      7429/redis-server *
+tcp        0      0 :::17003                    :::*                        LISTEN      7433/redis-server *
+tcp        0      0 :::17004                    :::*                        LISTEN      7437/redis-server *
+tcp        0      0 :::17005                    :::*                        LISTEN      7443/redis-server *
+tcp        0      0 :::7000                     :::*                        LISTEN      7423/redis-server *
+tcp        0      0 :::7001                     :::*                        LISTEN      7425/redis-server *
+tcp        0      0 :::7002                     :::*                        LISTEN      7429/redis-server *
+tcp        0      0 :::7003                     :::*                        LISTEN      7433/redis-server *
+tcp        0      0 :::7004                     :::*                        LISTEN      7437/redis-server *
+tcp        0      0 :::7005                     :::*                        LISTEN      7443/redis-server *
+tcp        0      0 :::17000                    :::*                        LISTEN      7423/redis-server *
+tcp        0      0 :::17001                    :::*                        LISTEN      7425/redis-server *
+tcp        0      0 :::17002                    :::*                        LISTEN      7429/redis-server *
+
+# 检查进程
+[root@db01 ~]#  ps -ef|grep redis
+root       7423      1  0 18:30 ?        00:00:00 redis-server *:7000 [cluster]
+root       7425      1  0 18:30 ?        00:00:00 redis-server *:7001 [cluster]
+root       7429      1  0 18:30 ?        00:00:00 redis-server *:7002 [cluster]
+root       7433      1  0 18:30 ?        00:00:00 redis-server *:7003 [cluster]
+root       7437      1  0 18:30 ?        00:00:00 redis-server *:7004 [cluster]
+root       7443      1  0 18:30 ?        00:00:00 redis-server *:7005 [cluster]
+```
+
 ## 参考链接
 
 * redis cluster-tutorial: https://redis.io/topics/cluster-tutorial/
+

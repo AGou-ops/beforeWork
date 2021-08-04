@@ -1,7 +1,5 @@
 # Ansible Modules
 
-## 文件操作相关
-
 - `fileglob`: 显示文件夹中的指定文件
 
 ```yaml
@@ -18,10 +16,9 @@
         - "/home/suofeiya/tmp/test*"
 ```
 
-## `mysql_user`: 增删用户及授权mysql数据库
+- `mysql_user`: 增删用户及授权mysql数据库
 
 ```yaml
-  tasks:
   - name: connect to mySQL and add User for mySQL
     mysql_user:
       login_host: 192.168.43.37
@@ -38,7 +35,7 @@
       - [ 'test', 'test1' ]
 ```
 
-## 遍历`vars`
+- 遍历`vars`
 
 ```yaml
   - name: Show value of 'variablename'
@@ -52,7 +49,7 @@
     - test1
 ```
 
-## `apt`&`apt_key`&`apt_repository`相关
+- `apt`&`apt_key`&`apt_repository`相关
 
 ```yaml
 - name: Install a list of packages
@@ -89,7 +86,7 @@
     repo: ppa:nginx/stable
 ```
 
-## `assemble`组合多个文件内容到一个文件, 并使用验证命令进行验证
+- `assemble`组合多个文件内容到一个文件, 并使用验证命令进行验证
 
 ```yaml
 - name: Assemble a new "sshd_config" file into place, after passing validation with sshd
@@ -100,7 +97,7 @@
 ```
 > 使用该命令时, 目标文件将被清空并替换为组合文件的内容.
 
-## `blockinfile`
+- `blockinfile`
 
 ```yaml
   - name: Insert/Update "Match User" configuration block in /etc/ssh/sshd_config
@@ -120,7 +117,7 @@
       block: ""
 ```
 
-## `expect`自动回复交互式命令(Ubuntu下测试无效)
+- `expect`自动回复交互式命令(Ubuntu下测试无效)
 
 ```yaml
 - name: Case insensitive password string match
@@ -138,7 +135,7 @@
         - response3
 ```
 
-## `fail`:自定义错误信息
+- `fail`:自定义错误信息
 
 ```yaml
   - name: Using fail message.
@@ -150,7 +147,7 @@
       name: agou-ops
 ```
 
-## `fetch`: 从远程主机获取文件
+- `fetch`: 从远程主机获取文件
 
 ```yaml
 - name: Specifying a destination path
@@ -160,7 +157,7 @@
     flat: yes		# 区分路径最后的那个`/`
 ```
 
-## `get_url`: 从http,https,ftp获取文件
+- `get_url`: 从http,https,ftp获取文件
 
 ```yaml
 - name: Download file with check (sha256)
@@ -171,7 +168,7 @@
     checksum: sha256:b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c
 ```
 
-## `git`:克隆仓库
+- `git`: 克隆仓库
 
 ```yaml
 - name: Create git archive from repo
@@ -185,7 +182,7 @@
     
 ```
 
-## Others
+- `random_choice`: 随机选择
 
 ```yaml
   - name: return a random list choice
@@ -196,3 +193,47 @@
     - "press the red button"
     - "do nothing"
 ```
+
+- `block`: 更好的组织playbook, 处理任务过程之中的异常和错误
+
+```yaml
+- name: Attempt and graceful roll back demo
+  block:
+    - name: Print a message
+      debug:
+        msg: 'I execute normally'
+
+    - name: Force a failure
+      command: /bin/false
+
+    - name: Never print this
+      debug:
+  msg: 'I never execute, due to the above task failing, :-('
+  when: ansible_facts['distribution'] == 'CentOS'
+  become: true
+  become_user: root
+  ignore_errors: yes
+  rescue:
+    - name: Print when errors
+      meta: flush_handlers      # 即使当错误出现，也要继续运行
+      debug:
+        msg: 'I caught an error'
+  always:
+    - name: Always do this
+      debug:
+        msg: "This always executes"
+```
+
+- `uri`: 服务状态检查
+
+```yaml
+  - name: check service status
+    uri:
+      url: http://localhost
+      return_content: yes
+    register: result
+    until: '"???" in result.content'
+    retries: 10
+    delay: 1
+```
+

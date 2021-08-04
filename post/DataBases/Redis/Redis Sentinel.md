@@ -44,6 +44,15 @@ bind 172.16.1.135
 编辑三个 Sentinel 哨兵配置文件`sentinel.conf `：
 
 ```bash
+# ---------- 简单配置 ----------
+port 26380
+dir "/etc/redis/26380"
+sentinel monitor mymaster 127.0.0.1 6379 1
+sentinel down-after-milliseconds mymaster 5000
+# -----------------------------
+
+# ---------------------- 配置详解 ----------------------
+
 # bind注释掉，需要在外网访问，将protected-model改为no
 protected-mode no
 
@@ -175,3 +184,24 @@ repl_backlog_histlen:68880
 
 可以发现`slave-2`已经翻身做`master`节点了～
 
+## Sentinel 管理命令
+
+```shell
+# 连接sentinel管理端口
+[root@db01 26380]# redis-cli -p 26380
+# 检测状态，返回PONG
+127.0.0.1:26380> PING
+PONG
+# 列出所有被监视的主服务器
+127.0.0.1:26380> SENTINEL masters
+# 列出所有被监视的从服务器
+127.0.0.1:26380> SENTINEL slaves mymaster
+# 返回给定名字的主服务器的IP地址和端口号
+127.0.0.1:26380> SENTINEL get-master-addr-by-name mymaster
+1) "127.0.0.1"
+2) "6380"
+# 重置所有名字和给定模式
+127.0.0.1:26380> SENTINEL reset mymaster
+# 当主服务器失效时，在不询问其他Sentinel意见的情况下，强制开始一次自动故障迁移。
+127.0.0.1:26380> SENTINEL failover mymaster
+```

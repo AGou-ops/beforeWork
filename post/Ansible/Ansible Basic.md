@@ -89,6 +89,8 @@ $ pip install --user ansible
 
 * `ansible` : 主程序
 * `ansible-doc` : ansible 文档
+  * `-l`: 列出所有模块
+  * `<Module_Name> -s`: 列出指定模块的选项
 * `ansible-playbook` : 剧本工具
 
 配置文件:

@@ -79,6 +79,6 @@ python -O -m py_compile __init__.py
 
 Ansible Tower的playbook默认存在 `/var/lib/awx/projects/`
 
-## 其他
+## 参考链接
 
-Ansible-Tower 配置要求 : https://docs.ansible.com/ansible-tower/3.0/html/installandreference/requirements_refguide.html
+- Ansible-Tower 配置要求 : https://docs.ansible.com/ansible-tower/3.0/html/installandreference/requirements_refguide.html

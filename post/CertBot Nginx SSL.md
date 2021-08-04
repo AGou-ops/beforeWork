@@ -12,8 +12,6 @@ I then SSH onto my new Grafana server,
 
 I enter these commands
 
-
-
 ```
 sudo apt-get update
 sudo apt-get install software-properties-common
@@ -44,8 +42,6 @@ After completion, you should then be able to now visit your Grafana server using
 https://**YOUR-DOMAIN-NAME**
 
 Note that after running Certbot, it has changed the settings of your Nginx configuration file you created earlier. You can see those changes by using the **cat** command.
-
-
 
 ```
 cat /etc/nginx/sites-enabled/YOUR-DOMAIN-NAME
