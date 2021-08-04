@@ -217,7 +217,7 @@
   * [Zookeeper Basic](post/Zookeeper/ZookeeperBasic.md)
 - **工作面试题**
   * [Redis](post/工作面试题/Redis.md)
-* [Cert Bot Nginx SSL](post/CertBotNginxSSL.md)
+* [CertBot Nginx SSL](post/CertBotNginxSSL.md)
 * [Dnsmasq](post/dnsmasq.md)
 * [inotifywait 文件监控](post/inotifywait文件监控.md)
 * [Jump Server](post/JumpServer.md)
