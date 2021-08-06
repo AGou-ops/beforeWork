@@ -49,9 +49,9 @@ ALTER TABLE <TABLE_NAME> <...OPTIONS...>;
             ADD PRIMARY KEY(字段名)   -- 创建主键
             ADD UNIQUE [索引名] (字段名)-- 创建唯一索引
             ADD INDEX [索引名] (字段名) -- 创建普通索引
-            DROP[ COLUMN] 字段名      -- 删除字段
-            MODIFY[ COLUMN] 字段名 字段属性     -- 支持对字段属性进行修改，不能修改字段名(所有原有属性也需写上)
-            CHANGE[ COLUMN] 原字段名 新字段名 字段属性      -- 支持对字段名修改
+            DROP [COLUMN] 字段名      -- 删除字段
+            MODIFY [COLUMN] 字段名 字段属性     -- 支持对字段属性进行修改，不能修改字段名(所有原有属性也需写上)
+            CHANGE [COLUMN] 原字段名 新字段名 字段属性      -- 支持对字段名修改
    	         * DROP PRIMARY KEY    -- 删除主键(删除主键前需删除其AUTO_INCREMENT属性)
             DROP INDEX 索引名 -- 删除索引
             DROP FOREIGN KEY 外键    -- 删除外键
@@ -129,7 +129,7 @@ SELECT 字段列表 FROM <TABLE_NAME> [其他子句]
 
 ```sql
 /* SELECT */ ------------------
-SELECT [ALL|DISTINCT] select_expr FROM -> WHERE -> GROUP BY [合计函数] -> HAVING -> ORDER BY -> LIMIT
+SELECT [ALL|DISTINCT] select_expr FROM -> WHERE --> GROUP BY [合计函数] -> HAVING -> ORDER BY -> LIMIT
 
 a. select_expr
     -- 可以用 * 表示所有字段。
@@ -165,13 +165,13 @@ c. WHERE 子句
 
 d. GROUP BY 子句, 分组子句
     GROUP BY 字段/别名 [排序方式]
-    分组后会进行排序。升序：ASC，降序：DESC
+    分组后会进行排序。排序规则，ASC升序（`DEFAULT`），DESC降序
 
     以下[合计函数]需配合 GROUP BY 使用：
     count 返回不同的非NULL值数目  count(*)、count(字段)
     sum 求和
     max 求最大值
-    min 求最小值
+    min 求最小值	
     avg 求平均值
     group_concat 返回带有来自一个组的连接的非NULL值的字符串结果。组内字符串连接。
 

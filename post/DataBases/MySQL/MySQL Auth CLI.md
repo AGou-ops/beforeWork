@@ -29,7 +29,7 @@ mysql> GRANT ALL PRIVILEGES ON *.* TO 'suofeiya'@'localhost' WITH GRANT OPTION;
 -- 创建用户并赋予RELOAD,PROCESS权限 ，在所有的库和表上
 mysql> GRANT RELOAD,PROCESS ON *.* TO 'admin'@'localhost' identified by '123456';
  
--- 创建test用户，在test库，temp表， 上的id列只有select 权限
+-- 创建test用户，在test库，temp表， 上的id列只有select权限
 mysql> grant select(id) on test.temp to test@'localhost' identified by '123456';
  ```
 
@@ -50,6 +50,7 @@ mysql> grant select on *.* to '用户名'@'IP地址' identified by '123456' with
 
 ```mysql
 mysql> DROP USER admin@'localhost';
+-- 通过修改数据表来删除用户时，需要刷新权限
 mysql> DELETE FROM mysql.user WHERE user='admin' AND host='localhost';
 mysql> FLUSH PRIVILEGES;
 ```
@@ -99,10 +100,10 @@ mysql> ALTER USER 'suofeiya'@'localhost' PASSWORD EXPIRE;
 使用`revoke`命令回收用户权限：
 
 ```mysql
-mysql> show grants for admin@'localhost'; -- 查询用户所有权限
+mysql> SHOW GRANTS FOR admin@'localhost'; -- 查询用户所有权限
 
 mysql> REVOKE DELETE ON *.* FROM admin@'localhost';	-- 回收部分权限
-mysql> REVOKE ALL PRIVILEGES FROM 用户名@’%’;	 -- 回收所有权限
+mysql> REVOKE ALL PRIVILEGES FROM `USER_NAME`@`%`;	 -- 回收所有权限
 ```
 
 ### 忘记 root 密码？
